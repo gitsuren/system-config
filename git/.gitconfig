@@ -43,6 +43,14 @@
 
 #From: http://smalltalk.gnu.org/blog/bonzinip/using-git-without-feeling-stupid-part-2
     changes=diff --name-status -r
+    filechng = show HEAD --name-only
+	
+[mergetool "kdiff3"]
+	cmd = \"C:\\\\work\\\\Tools\\\\KDiff3\\\\kdiff3\" $BASE $LOCAL $REMOTE -o $MERGED
+	
+[diff]	
+	rename = true
+	guitool = kdiff3
 
 [core]
 	editor = vim
